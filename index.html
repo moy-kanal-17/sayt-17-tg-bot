@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальный сайт канала Мой канал 17. Подписывайтесь на наш YouTube канал!">
+    <title>Мой канал 17</title>
+    <style>
+        /* Основной стиль */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #212121, #121212); /* Темные оттенки */
+            color: #f5f5f5; /* Светлый текст для контраста */
+            overflow-x: hidden; /* Запрещаем горизонтальную прокрутку */
+        }
+        header {
+            background: #1e2a3a; /* Темно-синий с синим оттенком */
+            color: #ff0000; /* Красный для контраста */
+            text-align: center;
+            padding: 60px 0; /* Увеличил отступ сверху и снизу */
+            border-bottom: 5px solid #ff0000; /* Красная линия */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            font-size: 4.5em; /* Увеличил размер шрифта */
+            margin: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        /* Блок с контентом */
+        .container {
+            width: 85%;
+            margin: 60px auto;
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(44, 62, 80, 0.9); /* Прозрачный темный фон */
+            border-radius: 25px; /* Круглые углы */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 2.5s forwards;
+        }
+        .description {
+            font-size: 1.8em; /* Увеличил размер текста */
+            margin: 30px 0;
+            color: #ecf0f1; /* Светлый цвет текста */
+            line-height: 1.8;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            animation: fadeIn 2.5s forwards;
+        }
+
+        /* Картинка канала в фоне */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('Anos_Voldigoad.webp');
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px); /* Увеличил размытие */
+            z-index: 1;
+            opacity: 0.6; /* Затемнил фон */
+        }
+
+        /* Картинка канала */
+        .channel-image {
+            width: 90%;
+            max-width: 700px; /* Увеличил максимальный размер */
+            height: auto;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 2.5s forwards;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .channel-image:hover {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        /* Кнопка YouTube */
+        .youtube-button {
+            background-color: #8a0e0e;
+            color: white;
+            padding: 25px 70px;
+            font-size: 2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 3s forwards;
+        }
+
+        .youtube-button:hover {
+            background-color: #ff0000;
+            transform: translateX(15px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .youtube-button:focus {
+            outline: none;
+        }
+
+        /* Эффект появления */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Подвал */
+        footer {
+            background-color: #1e2a3a;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Блоки друзей */
+        .friend-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 60px;
+            animation: fadeIn 2.5s forwards;
+        }
+        .friend {
+            background-color: rgba(44, 62, 80, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            width: 32%;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .friend:hover {
+            transform: scale(1.1);
+        }
+
+        .friend img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .friend img:hover {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.5em;
+            }
+            .container {
+                width: 90%;
+                padding: 25px;
+            }
+            .youtube-button {
+                font-size: 1.5em;
+                padding: 20px 60px;
+            }
+            .description {
+                font-size: 1.5em;
+            }
+            .friend-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .friend {
+                width: 80%;
+                margin-bottom: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Добро пожаловать на канал "Мой канал 17"</h1>
+</header>
+
+<div class="container">
+    <img src="Anos_Voldigoad.webp" alt="Картинка канала" class="channel-image">
+    <p class="description">
+        Привет! Я — <strong>Мой канал 17</strong>, и я начинающий YouTube-канал, ориентированный на сферу информационных технологий. На моем канале ты найдешь:
+        <ul>
+            <li>Обзоры новых технологий и гаджетов</li>
+            <li>Руководства и туториалы по IT</li>
+            <li>Разборы и советы по программированию</li>
+            <li>Видео по актуальным вопросам в мире технологий</li>
+        </ul>
+        Я стараюсь создавать качественный и доступный контент для тех, кто хочет развиваться в сфере IT, будь то новичок или опытный профессионал. Подписывайтесь на канал, и не пропустите новые видео!
+    </p>
+    <a href="https://www.youtube.com/@Anoswaldigort/" class="youtube-button" target="_blank" id="youtube-btn">Перейти на YouTube канал</a>
+</div>
+
+<div class="friend-container">
+    <div class="friend">
+        <img src="friend1.jpg" alt="За Монолит">
+        <h2>~/_За_Монолит_\~</h2>
+        <p>Геймер по Сталкеру и Brawl Stars! Также делает крутые мемы и прикольные шортсы! Подписывайтесь на канал для интересных видео и смешных мемов!</p>
+        <a href="https://www.youtube.com/channel/UCaIkMBQ5xZJ_A2hP3e6hq7w" class="youtube-button" target="_blank">Перейти на канал</a>
+    </div>
+
+    <div class="friend">
+        <img src="friend2.jpg" alt="Монолит">
+        <h2>Монолит</h2>
+        <p>Геймер по Сталкеру и Standoff. Создаёт мемы и забавные шортсы. Присоединяйтесь для увлекательных стримов и контента!</p>
+        <a href="https://www.youtube.com/@Monolit822" class="youtube-button" target="_blank">Перейти на канал</a>
+    </div>
+
+    <div class="friend">
+        <img src="friend3.jpg" alt="Зов монолита">
+        <h2>Зов монолита</h2>
+        <p>Геймер по Сталкеру, Brawl Stars и мемный креатор! Смотрите веселые видео, шортсы и стримы!</p>
+        <a href="https://www.youtube.com/@Cloboda_cula" class="youtube-button" target="_blank">Перейти на канал</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Мой канал 17. Все права защищены.</p>
+</footer>
+
+<script>
+    // Плавное появление кнопки при скролле
+    const youtubeBtn = document.getElementById('youtube-btn');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            youtubeBtn.style.transform = 'scale(1.1)';
+        } else {
+            youtubeBtn.style.transform = 'scale(1)';
+        }
+    });
+</script>
+
+</body>
+</html>   <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #212121, #121212);
+            color: #f5f5f5;
+        }
+
+        header {
+            background: #1e2a3a;
+            color: #ff0000;
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 5px solid #ff0000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 4.5em;
+            margin: 0;
+        }
+
+        .container {
+            width: 85%;
+            margin: 60px auto;
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(44, 62, 80, 0.9);
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .description {
+            font-size: 1.8em;
+            margin: 30px 0;
+            color: #ecf0f1;
+            line-height: 1.8;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .channel-image {
+            width: 90%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .youtube-button {
+            background-color: #8a0e0e;
+            color: white;
+            padding: 25px 70px;
+            font-size: 2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .youtube-button:hover {
+            background-color: #ff0000;
+            transform: translateX(15px);
+        }
+
+        /* Раздел поддержки автора */
+        .support-container {
+            margin-top: 60px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 25px;
+        }
+
+        .support-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff0000;
+        }
+
+        .support-description {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #ecf0f1;
+        }
+
+        .donate-button {
+            background-color: #ff8800;
+            color: white;
+            padding: 25px 70px;
+            font-size: 2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .donate-button:hover {
+            background-color: #ff6600;
+        }
+
+        /* Футер */
+        footer {
+            background-color: #1e2a3a;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>раздел для поддержки "Мой канал 17"</h1>
+</header>
+
+<div class="container">
+
+        Я стараюсь создавать качественный и доступный контент для тех, кто хочет развиваться в сфере IT, будь то новичок или опытный профессионал. Подписывайтесь на канал, и не пропустите новые видео, вы можете поддержать меня , но Если хочещ!
+    </p>
+</div>
+
+<!-- Раздел для поддержки автора -->
+<div class="support-container">
+    <h2 class="support-title">Поддержите автора!</h2>
+    <p class="support-description">Если вам нравится контент на канале, вы можете поддержать меня через донат. Это поможет развивать канал и создавать больше качественного контента!</p>
+    <a href="https://click.uz/" class="donate-button" target="_blank">Поддержать через Click</a>
+    <!-- Вы можете изменить ссылку на ссылку, которая ведет к вашей странице для приема платежей через Click -->
+</div>
+
+<footer>
+    <p>&copy; 2024 Мой канал 17. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
